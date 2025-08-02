@@ -56,6 +56,7 @@ end
 
 
 function main(bp, args)
+    --TODO scan all open buffers for buffers without save path and prompt to save
     local saved = bp:SaveAll() --failsafe to save all buffers IF THEY HAVE A SAVE PATH before openning yazi, in case something breaks
     --Gets the default opening mode for yazi, it is 'tab' by default
     local mode = config.GetGlobalOption('yazi.mode')
